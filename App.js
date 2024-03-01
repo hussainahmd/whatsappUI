@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text } from "react-native";
+import { useAssets } from "expo-asset";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SignIn from "./screens/SignIn";
+import LogIn from "./screens/LogIn";
+import Welcome from "./screens/Welcome";
+import Info from "./screens/Info";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Welcome"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Info" component={Info} />
+        <Stack.Screen name="LogIn" component={LogIn} />
+        {/* <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignIn" component={SignIn} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function Main() {
+  const [assets] = useAssets(
+    require("./assets/icon-square.png"),
+    require("./assets/chatbg.png"),
+    require("./assets/user-icon.png"),
+    require("./assets/welcome-img.png")
+  );
+  if (!assets) return <Text>Loading...</Text>;
+
+  return <App/>
+}
