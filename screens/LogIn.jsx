@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import React, { useState } from "react";
 import { Octicons } from "@expo/vector-icons";
 
-export default function LogIn({navigation}) {
+export default function LogIn({ navigation }) {
   const [isTouched, setIsTouched] = useState(false);
   const [isTouched2, setIsTouched2] = useState(false)
 
@@ -30,9 +30,8 @@ export default function LogIn({navigation}) {
       </View>
 
       <TouchableOpacity
-        className={`mt-5 w-[300] h-[50] border-b-[#25927a] border-b${
-          isTouched ? "-[3px]" : ""
-        }`}
+        className={`mt-5 w-[300] h-[50] border-b-[#25927a] border-b${isTouched ? "-[3px]" : ""
+          }`}
         onPress={() => setIsTouched(!isTouched)}
       >
         <View className=" flex-grow flex-row items-center justify-center">
@@ -55,7 +54,7 @@ export default function LogIn({navigation}) {
             maxLength={3}
           />
         </View>
-        
+
         <TextInput
           className="ml-6 w-[160] h-[40] text-xl border-b-[#25927a] border-b-[3px]"
           keyboardType="numeric"
@@ -64,7 +63,7 @@ export default function LogIn({navigation}) {
         />
       </View>
 
-      <TouchableOpacity className="bg-[#25927a] rounded-full absolute bottom-[40]" onPress={()=> navigation.navigate('Chats')}>
+      <TouchableOpacity className="bg-[#25927a] rounded-full absolute bottom-[40]" onPress={() => navigation.navigate('Chats')}>
         <Text className="text-xl text-white text-center py-3 px-[30]">Next</Text>
       </TouchableOpacity>
     </View>
