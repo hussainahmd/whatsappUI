@@ -6,6 +6,7 @@ import SignIn from "./screens/SignIn";
 import LogIn from "./screens/LogIn";
 import Welcome from "./screens/Welcome";
 import Info from "./screens/Info";
+import Chats from "./screens/Chats";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,12 +17,12 @@ function App() {
         initialRouteName="Welcome"
         screenOptions={{ headerShown: false }}
       >
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="SignIn" component={SignIn}/>
+        <Stack.Screen name="Welcome" component={Welcome}/>
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="LogIn" component={LogIn} />
-        {/* <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="SignIn" component={SignIn} /> */}
+        <Stack.Screen name="Chats" component={Chats} />
+        {/* <Stack.Screen name="SignIn" component={SignIn} options={{headerShown: true, title:'Enter Ph'}}/>*/}
       </Stack.Navigator>
     </NavigationContainer>
   );
