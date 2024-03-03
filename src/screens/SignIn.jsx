@@ -33,7 +33,7 @@ export default function SignIn() {
         Welcome to Whatsapp
       </Text>
       <Image
-        source={require("../assets/welcome-img.png")}
+        source={require("../../assets/welcome-img.png")}
         style={{ width: 180, height: 180 }}
         resizeMode="cover"
       />

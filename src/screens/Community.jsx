@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Info() {
+export default function Community() {
   return (
     <View>
-      <Text>Info</Text>
+      <Text>Community</Text>
     </View>
   )
 }

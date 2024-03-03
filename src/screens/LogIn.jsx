@@ -63,7 +63,7 @@ export default function LogIn({ navigation }) {
         />
       </View>
 
-      <TouchableOpacity className="bg-[#25927a] rounded-full absolute bottom-[40]" onPress={() => navigation.navigate('Chats')}>
+      <TouchableOpacity className="bg-[#25927a] rounded-full absolute bottom-[40]" onPress={() => navigation.navigate('Home')}>
         <Text className="text-xl text-white text-center py-3 px-[30]">Next</Text>
       </TouchableOpacity>
     </View>

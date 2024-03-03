@@ -7,7 +7,7 @@ export default function Welcome({navigation}) {
       <View className="items-center">
         <Image
           className="h-[300] w-[300]"
-          source={require("../assets/welcome-img.png")}
+          source={require("../../assets/welcome-img.png")}
         />
       </View>
 
