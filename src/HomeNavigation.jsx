@@ -27,8 +27,8 @@ export default function HomeNavigation() {
           backgroundColor: '#25927a'
         },
         tabBarAndroidRipple: { borderless: false },
-      }
-      }
+      }}
+      
     >
       <Tab.Screen
         name='Community'
@@ -37,14 +37,16 @@ export default function HomeNavigation() {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name='account-group' size={24} color={color} />
           ),
-          tabBarLabelStyle:{
-            display:'none'
-          }
+          tabBarShowLabel:false,
+          //tabBarStyle:{width:30}
         }}
       />
       <Tab.Screen
         name='Chats'
         component={Chats}
+        options={{
+          tabBarLabel:'Chats',
+        }}
       />
       <Tab.Screen
         name='Updates'
