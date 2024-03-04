@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Calls() {
   return (
-    <View>
+    <View className='justify-center items-center flex-1'>
       <Text>Calls</Text>
     </View>
   )
