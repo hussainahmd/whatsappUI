@@ -1,7 +1,10 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native"
+import React, { useState, useEffect } from 'react'
 
-export default function Welcome({navigation}) {
-    
+global.mode = false
+
+export default function Welcome({ navigation }) {
+
   return (
     <View className=" flex-1 bg-white justify-center items-center">
       <View className="items-center">
@@ -46,5 +49,5 @@ export default function Welcome({navigation}) {
         </Text>
       </TouchableOpacity>
     </View>
-  );
+  )
 }
