@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 import { NavigationContainer } from "@react-navigation/native"
 
-//import HeaderCell from '../components/HeaderCell';
+//import HeaderCell from '../components/HeaderCell'
 import HeaderCell from "./screens/components/HeaderCell"
 import HomeNavigation from "./HomeNavigation"
 
