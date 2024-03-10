@@ -2,7 +2,6 @@ import { Text } from "react-native"
 import { useAssets } from "expo-asset"
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import SignIn from "./src/screens/SignIn"
 import LogIn from "./src/screens/LogIn"
 import Welcome from "./src/screens/Welcome"
 import Home from "./src/Home"
@@ -18,7 +17,6 @@ function App() {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="Home" component={Home} />
 
