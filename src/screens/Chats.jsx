@@ -6,7 +6,7 @@ import DATA from '../data/chatdata'
 export default function Chats() {
   const [chatData, setChatData] = useState(DATA)
 
-  useEffect(() => {
+  useEffect(() => {//
     setChatData(DATA)
   })
 
